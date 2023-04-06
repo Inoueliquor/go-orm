@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/codingXiang/configer"
 	"github.com/codingXiang/go-logger"
-	"github.com/codingXiang/go-orm/model"
+	"github.com/Inoueliquor/go-orm/model"
 	"github.com/ghodss/yaml"
 	"github.com/go-redis/redis"
 	"strings"

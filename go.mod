@@ -1,11 +1,11 @@
-module github.com/codingXiang/go-orm
+module github.com/Inoueliquor/go-orm
 
 go 1.13
 
 require (
-	github.com/8treenet/gcache v1.1.10 // indirect
 	github.com/codingXiang/configer v1.0.2-0.20200513072245-ec8070de9a16
 	github.com/codingXiang/go-logger v1.0.0
+	github.com/denisenkom/go-mssqldb v0.0.0-20191124224453-732737034ffd
 	github.com/ghodss/yaml v1.0.0
 	github.com/go-redis/redis v6.15.7+incompatible
 	github.com/go-sql-driver/mysql v1.5.0 // indirect
@@ -23,5 +23,4 @@ require (
 	golang.org/x/sys v0.0.0-20200515095857-1151b9dac4a9 // indirect
 	golang.org/x/xerrors v0.0.0-20191011141410-1b5146add898 // indirect
 	gopkg.in/ini.v1 v1.56.0 // indirect
-	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 )

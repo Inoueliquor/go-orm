@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/codingXiang/configer/v2"
 	"github.com/codingXiang/go-logger/v2"
-	"github.com/codingXiang/go-orm/v2"
+	"github.com/Inoueliquor/go-orm/v2"
 	"github.com/ghodss/yaml"
 	"github.com/go-redis/redis"
 	"github.com/spf13/viper"

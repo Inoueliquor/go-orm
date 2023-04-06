@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 	"github.com/codingXiang/configer/v2"
-	"github.com/codingXiang/go-orm/v2"
+	"github.com/Inoueliquor/go-orm/v2"
 	"github.com/spf13/viper"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"

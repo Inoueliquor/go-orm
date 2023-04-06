@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/codingXiang/configer"
 	"github.com/codingXiang/go-logger"
-	"github.com/codingXiang/go-orm"
+	"github.com/Inoueliquor/go-orm"
 )
 
 type Test struct {

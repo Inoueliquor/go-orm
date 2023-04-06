@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"github.com/codingXiang/configer"
 	"github.com/codingXiang/go-logger"
-	. "github.com/codingXiang/go-orm/model"
+	. "github.com/Inoueliquor/go-orm/model"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"    // mysql
 	_ "github.com/jinzhu/gorm/dialects/postgres" //postgresql
+	_ "github.com/denisenkom/go-mssqldb" //mssql
 	"github.com/pkg/errors"
 	"github.com/spf13/viper"
 	"strconv"
@@ -65,7 +66,7 @@ func (this *Orm) init(core configer.CoreInterface) (OrmInterface, error) {
 			tablePrefix = data.GetString("database.tablePrefix")
 			version     = data.GetString("database.version")
 		)
-		//設定資料庫型態 (MySQL, PostgreSQL) 與連線資訊
+		//設定資料庫型態 (MySQL, PostgreSQL, MSSQL) 與連線資訊
 		logger.Log.Debug("setup database type")
 		err = this.setDatabaseType(data)
 
@@ -158,6 +159,16 @@ func (this *Orm) setDatabaseType(config *viper.Viper) error {
 	)
 	logger.Log.Debug("set database type = ", _type)
 	switch _type {
+	case "mssql":
+		var connectStr = fmt.Sprintf("server=%s;user id=%s;password=%s;port=%d;database=%s",
+			username, password, url, port, dbName)
+		logger.Log.Debug("connection string = ", connectStr)
+		this.db, err = gorm.Open(_type, connectStr)
+		if err != nil {
+			logger.Log.Error("connect to database error", err)
+			return err
+		}
+		break
 	case "mysql":
 		var connectStr = fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=true",
 			username, password, url, port, dbName)

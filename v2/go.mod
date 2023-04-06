@@ -1,4 +1,4 @@
-module github.com/codingXiang/go-orm/v2
+module github.com/Inoueliquor/go-orm/v2
 
 go 1.13
 

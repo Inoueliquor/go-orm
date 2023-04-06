@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/codingXiang/configer/v2"
 	"github.com/codingXiang/go-logger/v2"
-	"github.com/codingXiang/go-orm/v2"
+	"github.com/Inoueliquor/go-orm/v2"
 )
 
 type Test struct {

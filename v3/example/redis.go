@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/codingXiang/go-logger/v2"
-	"github.com/codingXiang/go-orm/v2/redis"
+	"github.com/Inoueliquor/go-orm/v2/redis"
 	"time"
 )
 
